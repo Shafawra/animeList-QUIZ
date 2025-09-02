@@ -7,10 +7,4 @@ menuBtn.addEventListener("click", () => {
 
 const btnTheme = document.getElementById("btnTheme").addEventListener("click", () => {
     document.body.style.background = "#1F2937";
-
-    if (btnTheme.innerHTML === "☀️") {
-        btnTheme.innerHTML = "🌒";
-      } else {
-        btnTheme.innerHTML = "☀️";
-      }
 })
