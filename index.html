@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#6366F1',
+                    secondary: '#8B5CF6',
+                    darkBg: '#1F2937',
+                    lightBg: '#F9FAFB',   
+                    textLight: '#111827', 
+                    textDark: '#whitesmoke',
+                    },
+                },
+            },
+         }
+    </script>
+
+</head>
+<body class="bg-lightBg min-h-screen">
+    <div class="relative min-h-screen bg-secondary">
+
+        <nav class="sticky top-0 container m-auto flex justify-between items-center z-50">
+            <!-- logo -->
+                <div class="flex gap-3">
+                    <img class="size-20" src="assets/img/Gemini_Generated_Image_8bzaq68bzaq68bza-removebg-preview.png" alt="">
+                    <button id="menuBtn" class="md:hidden lg:hidden text-3xl">&#9776;</button>
+                </div>
+
+            <!-- nav list -->
+                <div id="menu" class="hidden md:flex absolute top-full left-0 w-full bg-[var(--color-secondary)]/80 shadow-md md:static md:items-center md:w-auto md:bg-transparent md:shadow-none">
+                    <ul class="flex flex-col md:flex-row gap-4 md:gap-8 md:p-0 ">
+                        <li><a class="text-lg font-bold text-text hover:underline hover:text-white" href="#home">Home</a></li>
+                        <li><a class="text-lg font-bold text-text hover:underline hover:text-white" href="#">List</a></li>
+                        <li><a class="text-lg font-bold text-text hover:underline hover:text-white" href="#">About</a></li>
+                    </ul>
+                </div>
+
+            <button id="btnTheme" class="text-md rounded-md flex items-center px-2 text-[whitesmoke] hover:bg-transparent hover:border hover:border-white bg-purple-950" id="themeBtn">theme <span class="text-2xl">🌒</span></button>
+
+        </nav>
+
+        <section id="home" class="relative flex flex-col sm:flex-row">
+            <div class="max-w-lg md:w-1/2 p-10 m-3 ml-6 ">
+                <h1 class="text-4xl md:text-5xl font-bold ">Nonton Anime Favorit Kapanpun Dimanapun</h1>
+                <p class="text-xl font-semibold py-4 ">Nikmati streaming anime online dari koleksi terbaik dalam berbagai genre</p>
+                <button class="text-lg font-semibold border-none bg-blue-950 text-white p-3 rounded-md hover:brightness-150 hover:scale-105 transition duration-300">Mulai Nonton</button>
+            </div>
+            <img class="lg:absolute lg:right-0 lg:top-0 static max-w-lg" src="assets/img/2a01cffe8f8b8e828adac54bde15e77f-removebg-preview.png" alt="img">
+        </section>
+    </div>
+
+    <!-- anime list section -->
+    <section class="container m-auto">
+        <h1 class="text-3xl font-bold py-5">Anime Populer 🔥</h1>
+        <div class="flex gap-3 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Zm-60-80v-200l160 100-160 100Z"/></svg>
+            <input class="border-black border py-2 px-2 rounded-md w-full" type="text" placeholder="Search">
+        </div>
+
+        <!-- anime list -->
+        <div id="animeList" class=" flex overflow-x-scroll gap-1 pt-5 p-3">
+            <div class=" min-w-[8rem] sm:min-w-[11rem] md:min-w-[15rem] px-2 py-5 hover:scale-105 transition duration-300 hover:shadow-black-md cursor-pointer">
+                <img class="w-full object-cover rounded-md" src="https://i.pinimg.com/736x/8c/40/4c/8c404c236ac042ad7fa5e9243fe5a246.jpg" alt="">
+                <div class="p-2">
+                    <h1>Demon Slayer</h1>
+                    <p>Action, Fantasy</p>
+                    <span>⭐ 4.8</span>
+                </div>
+            </div>
+            <div class=" min-w-[8rem] sm:min-w-[11rem] md:min-w-[15rem] px-2 py-5 hover:scale-105 transition duration-300 hover:shadow-black-md cursor-pointer">
+                <img class="w-full h-fit object-cover rounded-md" src="https://i.pinimg.com/736x/8e/aa/63/8eaa630041d04d7e98c152b6a35ff310.jpg" alt="">
+                <div class="p-2">
+                    <h1>Totoro</h1>
+                    <p>Fantasy</p>
+                    <span>⭐ 4.8</span>
+                </div>
+            </div>
+            <div class=" min-w-[8rem] sm:min-w-[11rem] md:min-w-[15rem] px-2 py-5 hover:scale-105 transition duration-300 hover:shadow-black-md cursor-pointer">
+                <img class="w-full object-cover rounded-md" src="https://i.pinimg.com/736x/a0/98/4a/a0984aa2d07009cf726a91e6528d1517.jpg" alt="">
+                <div class="p-2">
+                    <h1>Spirited Away</h1>
+                    <p>Horor, Fantasy</p>
+                    <span>⭐ 4.6</span>
+                </div>
+            </div>
+            <div class=" min-w-[8rem] sm:min-w-[11rem] md:min-w-[15rem] px-2 py-5 hover:scale-105 transition duration-300 hover:shadow-black-md cursor-pointer">
+                <img class="w-full object-cover rounded-md" src="https://i.pinimg.com/736x/6c/ac/87/6cac87767fa12a06f5f937412ea86770.jpg" alt="">
+                <div class="p-2">
+                    <h1>Grave of The Fireflies</h1>
+                    <p>History</p>
+                    <span>⭐ 4.8</span>
+                </div>
+            </div>
+            <div class=" min-w-[8rem] sm:min-w-[11rem] md:min-w-[15rem] px-2 py-5 hover:scale-105 transition duration-300 hover:shadow-black-md cursor-pointer">
+                <img class="w-full object-cover rounded-md" src="https://i.pinimg.com/1200x/15/2a/30/152a3032e51a6d7b081525fc64d10aff.jpg" alt="">
+                <div class="p-2">
+                    <h1>The Promised Never Land</h1>
+                    <p>Action, Fantasy</p>
+                    <span>⭐ 4.4</span>
+                </div>
+            </div>
+            <div class=" min-w-[8rem] sm:min-w-[11rem] md:min-w-[15rem] px-2 py-5 hover:scale-105 transition duration-300 hover:shadow-black-md cursor-pointer">
+                <img class="w-full object-cover rounded-md" src="https://i.pinimg.com/1200x/84/86/1a/84861a710e13d620e268ffc272427200.jpg" alt="">
+                <div class="p-2">
+                    <h1>Tokyo Revenger</h1>
+                    <p>Action, School</p>
+                    <span>⭐ 4.9</span>
+                </div>
+            </div>
+            <div class=" min-w-[8rem] sm:min-w-[11rem] md:min-w-[15rem] px-2 py-5 hover:scale-105 transition duration-300 hover:shadow-black-md cursor-pointer">
+                <img class="w-full object-cover rounded-md" src="https://i.pinimg.com/736x/f4/17/b7/f417b77eba4f78883c01158d71c6bad6.jpg" alt="">
+                <div class="p-2">
+                    <h1>One Punch Man</h1>
+                    <p>Action</p>
+                    <span>⭐ 4.8</span>
+                </div>
+            </div>
+            <div class=" min-w-[8rem] sm:min-w-[11rem] md:min-w-[15rem] px-2 py-5 hover:scale-105 transition duration-300 hover:shadow-black-md cursor-pointer">
+                <img class="w-full object-cover rounded-md" src="https://i.pinimg.com/1200x/06/52/81/0652811d6bfd0a9874cc4808347e66ed.jpg" alt="">
+                <div class="p-2">
+                    <h1>Dr Stone</h1>
+                    <p>Sci-Fi, Fantasy</p>
+                    <span>⭐ 4.7</span>
+                </div>
+            </div>
+            <div class=" min-w-[8rem] sm:min-w-[11rem] md:min-w-[15rem] px-2 py-5 hover:scale-105 transition duration-300 hover:shadow-black-md cursor-pointer">
+                <img class="w-full object-cover rounded-md" src="https://i.pinimg.com/736x/11/a2/70/11a2705495498fda3fbac7c07d6247d0.jpg" alt="">
+                <div class="p-2">
+                    <h1>Mashel</h1>
+                    <p>School, Magic, Fantasy</p>
+                    <span>⭐ 4.7</span>
+                </div>
+            </div>
+            <div class=" min-w-[8rem] sm:min-w-[11rem] md:min-w-[15rem] px-2 py-5 hover:scale-105 transition duration-300 hover:shadow-black-md cursor-pointer">
+                <img class="w-full object-cover rounded-md" src="https://i.pinimg.com/1200x/4b/81/bc/4b81bcc46f99c4e2d2716305e06d6208.jpg" alt="">
+                <div class="p-2">
+                    <h1>Naruto</h1>
+                    <p>Action, Slice of Life</p>
+                    <span>⭐ 4.8</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- tentang & FAQ -->
+    <section class="container m-auto">
+        <h1 class="text-3xl font-bold py-5">Tentang AnimeList 🎞️</h1>
+        <p class="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, natus deserunt magni quidem quis asperiores perferendis beatae mollitia ducimus necessitatibus similique, laborum dignissimos fugit pariatur laboriosam, blanditiis voluptas officia? Nam Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores consectetur soluta incidunt laudantium at sequi minima quia veritatis eius sed, hic, excepturi a molestias non enim ea accusamus voluptatem quo..</p>
+        <div class="max-w-[800px] m-auto pt-4 py-5">
+            <div class="flex flex-col gap-1">
+                <button class="btnHeader p-3 bg-slate-700 w-full text-left">Apa itu AnimeList?</button>
+                <div class="bg-slate-600  flex flex-col gap-2 overflow-hidden max-h-0">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae ab ipsa eligendi dicta voluptas dignissimos culpa est quos rem aliquid nulla similique sint autem, eius ratione sed modi pariatur voluptatibus?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto eaque dicta voluptate. Autem dolor, quaerat assumenda provident pariatur odit voluptatibus aspernatur cupiditate sunt vel perferendis alias debitis! Aliquam, earum error?</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-1">
+                <button class="btnHeader p-3 bg-slate-700 w-full text-left">Nonton Gratis?</button>
+                <div class="bg-slate-600  flex flex-col gap-2 overflow-hidden max-h-0">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae ab ipsa eligendi dicta voluptas dignissimos culpa est quos rem aliquid nulla similique sint autem, eius ratione sed modi pariatur voluptatibus?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto eaque dicta voluptate. Autem dolor, quaerat assumenda provident pariatur odit voluptatibus aspernatur cupiditate sunt vel perferendis alias debitis! Aliquam, earum error?</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-1">
+                <button class="btnHeader p-3 bg-slate-700 w-full text-left">Kapan Update Eps Terbaru?</button>
+                <div class="bg-slate-600  flex flex-col gap-2 overflow-hidden max-h-0">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae ab ipsa eligendi dicta voluptas dignissimos culpa est quos rem aliquid nulla similique sint autem, eius ratione sed modi pariatur voluptatibus?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto eaque dicta voluptate. Autem dolor, quaerat assumenda provident pariatur odit voluptatibus aspernatur cupiditate sunt vel perferendis alias debitis! Aliquam, earum error?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-slate-800">
+        <div class="container m-auto flex flex-col justify-between items-center sm:flex-row p-4">
+            <h1 class="text-3xl font-bold text-white">AnimeList</h1>
+            <div class="flex gap-3">
+                <a href="#" ><img class="w-8 h-8 hover:scale-110 transition" src="assets/img/facebook.png" alt=""></a>
+                <a href="#" ><img class="w-8 h-8 hover:scale-110 transition" src="assets/img/instagram.png" alt=""></a>
+                <a href="#" ><img class="w-8 h-8 hover:scale-110 transition" src="assets/img/twitter.png" alt=""></a>
+            </div>
+        </div>
+        <div class="text-center text-xs text-white pb-5">
+            <span>&copy; 2025 AnimeList</span>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
