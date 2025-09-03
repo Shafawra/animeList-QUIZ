@@ -5,6 +5,11 @@ menuBtn.addEventListener("click", () => {
     menu.classList.toggle("hidden");
 });
 
-const btnTheme = document.getElementById("btnTheme").addEventListener("click", () => {
-    document.body.style.background = "#1F2937";
+
+const btnTheme = document.getElementById("btnTheme")
+const body = document.body;
+
+btnTheme.addEventListener("click", () => {
+    document.body.style.background = "#222";
+    document.body.style.color = "whitesmoke"
 })
